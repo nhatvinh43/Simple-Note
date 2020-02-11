@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/search_bar"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:layout_gravity="center_horizontal"
+
+        >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@drawable/search_bar"
+            android:elevation="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/ok"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_corners"
+                    android:foregroundTint="#F07B2F"
+                    android:src="@drawable/outline_check_24"
+                    android:tint="#F07B2F"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+                <ImageButton
+                    android:id="@+id/cancel"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/outline_arrow_back_24"
+                    android:tint="#F07B2F"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/outline_delete_24"
+                    android:tint="#F07B2F"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            >
+            <EditText
+                android:id="@+id/edit_tags"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_corners"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#FFDF9E"
+                android:hint="@string/hint_tags"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:hint="@string/hint_title"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="400dp"
+                android:lineSpacingMultiplier="1.2" />
+
+        </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/align_left"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="start|bottom"
+        android:background="@drawable/rounded_corners"
+        android:foregroundTint="#F07B2F"
+        android:src="@drawable/outline_format_align_left_24"
+        android:tint="#F07B2F"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <ImageButton
+        android:id="@+id/align_right"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/rounded_corners"
+        android:src="@drawable/outline_format_align_right_24"
+        android:tint="#F07B2F"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <ImageButton
+        android:id="@+id/align_center"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/rounded_corners"
+        android:src="@drawable/outline_format_align_center_24"
+        android:tint="#F07B2F"
+        android:foreground="?android:attr/selectableItemBackground"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
